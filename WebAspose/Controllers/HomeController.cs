@@ -20,7 +20,7 @@ public class HomeController : ControllerBase
 
     
     [HttpGet]
-    [Route("Morpheus")]
+    [Route("Proteus")]
     public async Task<IActionResult> Test2()
     {
         var obj = new ClassA
@@ -31,10 +31,10 @@ public class HomeController : ControllerBase
         };
 
         // generate a hash
-        var hash = Morpheus.Serialize(obj);
+        var hash = Proteus.Serialize(obj);
 
         // has this object changed
-        var isEqual = Morpheus.Compare(obj, hash);
+        var isEqual = Proteus.Compare(obj, hash);
 
         return Ok(isEqual);
     }
@@ -46,7 +46,7 @@ public class HomeController : ControllerBase
     {
         var objA = new ClassA
         {
-            Property1 = "Test", 
+            Property1 = "test", 
             Property2 = 123,
             Property3 = DateTime.Now
         };
@@ -57,7 +57,7 @@ public class HomeController : ControllerBase
             Property2 = 123
         };
         
-        var areEqual = Morpheus.CompareObjects(objA, objB);
+        var areEqual = Proteus.CompareObjects(objA, objB);
         return await Task.FromResult(Ok(areEqual));
     }
 

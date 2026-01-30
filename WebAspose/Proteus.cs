@@ -8,7 +8,7 @@ namespace WebAspose;
 /// <summary>
 ///     This class is used to determine if an object has changes or not.
 /// </summary>
-public static class Morpheus
+public static class Proteus
 {
     public static bool CompareObjects<T1, T2>(T1 obj1, T2 obj2)
     {
