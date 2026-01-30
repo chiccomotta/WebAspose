@@ -58,7 +58,7 @@ public class HomeController : ControllerBase
         };
         
         var areEqual = Morpheus.CompareObjects(objA, objB);
-        return Ok(areEqual);
+        return await Task.FromResult(Ok(areEqual));
     }
 
     [HttpGet]
