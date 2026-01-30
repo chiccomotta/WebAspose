@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Aspose.Cells" Version="26.1.0" />
+    <PackageReference Include="EPPlus" Version="8.4.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 

@@ -125,6 +125,11 @@ public class HomeController : ControllerBase
         //);
     }
 
-    
-
+    [HttpGet]
+    [Route("EPPlus")]
+    public async Task<IActionResult> GetExcelEPPlus()
+    {
+        await ChartsAndThemesSample.RunAsync();
+        return Ok("OK");
+    }
 }

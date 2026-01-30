@@ -6,7 +6,7 @@ using System.Text.Json;
 namespace WebAspose;
 
 /// <summary>
-///     This class is used to determine if an object has changes or not.
+///     Provides utility methods for object comparison, serialization, and state validation.
 /// </summary>
 public static class Proteus
 {
@@ -16,7 +16,7 @@ public static class Proteus
             throw new ArgumentNullException("Gli oggetti non possono essere null.");
 
         // Ottieni tutte le proprietà decorate con [ToCompare] per il primo oggetto
-        var properties1 = typeof(T1).GetProperties()
+        var properties1 = typeof(T1).GetProperties()    
             .Where(p => p.GetCustomAttribute<ToCompareAttribute>() != null);
 
         // Ottieni tutte le proprietà del secondo oggetto
